@@ -4,16 +4,14 @@ import com.example.shopping_demo.Modal.Inventory;
 import com.example.shopping_demo.services.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
-@RequestMapping("api/v1/shop")
-public class ShopController {
+@RequestMapping("api/v1/inventory")
+public class InventoryController {
 
     @Autowired
     private InventoryService inventoryService;
